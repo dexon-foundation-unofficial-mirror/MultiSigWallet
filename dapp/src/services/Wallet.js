@@ -51,23 +51,13 @@
       wallet.getGasPrice = function () {
         return $q(
           function(resolve, reject){
-            $http
-              .get(txDefault.websites.ethGasStation)
-              .then(
-                function(response) {
-                  resolve(response.data.standard)
-                },
-                function (error) {
-                  // Get gas price from Ethereum Node
-                  Web3Service.web3.eth.getGasPrice(function (g_error, g_result) {
-                    if (g_error) {
-                      reject (g_error);
-                    } else {
-                      resolve(g_result);
-                    }
-                  });
-                }
-              )
+            Web3Service.web3.eth.getGasPrice(function (g_error, g_result) {
+              if (g_error) {
+                reject (g_error);
+              } else {
+                resolve(g_result);
+              }
+            });
           }
         );
       };

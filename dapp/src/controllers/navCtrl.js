@@ -101,7 +101,7 @@
         */
         $scope.openMetamaskWidget = function (resolve, reject) {
           // Ask to reload provider, it takes care of re-ejecuting metamask checks.
-          Web3Service.enableMetamask(function (error) {
+          Web3Service.enableDexon(function (error) {
             if (error && reject) {
               $scope.loggedIn = false;
               reject();

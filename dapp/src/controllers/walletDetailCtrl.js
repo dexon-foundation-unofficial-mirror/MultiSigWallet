@@ -103,7 +103,7 @@
               )
           );
 
-          // Get ETH Balance
+          // Get DXN Balance
           batch.add(
             Wallet.getBalance(
               $scope.wallet.address,

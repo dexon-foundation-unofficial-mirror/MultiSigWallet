@@ -31,7 +31,7 @@
           }
         }
 
-        // Automatically get ETH chain
+        // Automatically get DXN chain
         Transaction.getEthereumChain().then(
           function (data) {
             var factoryAddress;
