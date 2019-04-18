@@ -21,8 +21,8 @@
         * user rejects the approval request.
         * @param callback, function (error, accounts)
         */
-        factory.enableMetamask = function (callback) {
-          $window.ethereum.enable().then(function (accounts) {
+        factory.enableDexon = function (callback) {
+          $window.dexon.enable().then(function (accounts) {
             factory.reloadWeb3Provider(null, callback);
             // Convert to checksummed addresses
             accounts = factory.toChecksumAddress(accounts);
@@ -50,20 +50,18 @@
         * @param reject, function (optional)
         **/
         factory.reloadWeb3Provider = function (resolve, reject) {
-
           factory.accounts = [];
           factory.coinbase = null;
           var web3 = null;
 
           // Legacy dapp browsers...
-          if ($window.web3 && !$window.ethereum) {
-            web3 = $window.web3;
-          }
           // TODO: figure out whether Metamask standardizes isEnabled() or find out
           // another way to manage it
           // https://github.com/MetaMask/metamask-extension/blob/2f7d4494278ad809c1cc9fcc0d9438182003b22d/app/scripts/inpage.js#L101
-          else if ($window.ethereum && window.ethereum._metamask.isEnabled()) {
-            web3 = $window.ethereum;
+
+          if ($window.dexon && window.dexon._dekusan.isEnabled()) {
+            web3 = new Web3()
+            web3.setProvider($window.dexon);
           }
 
           // Ledger wallet

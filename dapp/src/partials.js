@@ -1082,12 +1082,12 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "                ng-min=\"minimumGasLimit\" max=\"999999999999999\" required >\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "            <label for=\"value\">Gas price (GWei):</label>\n" +
+    "            <label for=\"value\">Gas price (GDal):</label>\n" +
     "            <input id=\"value\" type=\"number\" class=\"form-control\" ng-model=\"gasPrice\" step=\"any\" min=\"0\" ng-change=\"calculateFee()\" \n" +
     "                max=\"999999999999999\" required >\n" +
     "        </div>\n" +
     "        <div class=\"form-group\">\n" +
-    "            <label for=\"value\">Tx fees (ETH):</label>\n" +
+    "            <label for=\"value\">Tx fees (DXN):</label>\n" +
     "            <input id=\"value\" disabled type=\"number\" class=\"form-control\" ng-model=\"txFee\" step=\"any\" min=\"0\" max=\"999999999999999\" required >\n" +
     "        </div>\n" +
     "    </div>\n" +
@@ -1099,7 +1099,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "            Cancel\n" +
     "        </button>\n" +
     "    </div>\n" +
-    "</form>"
+    "</form>\n"
   );
 
 
@@ -1152,7 +1152,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "<form class=\"form\" name=\"form\">\n" +
     "  <div class=\"modal-body\">\n" +
     "    <div class=\"form-group\">\n" +
-    "      <label for=\"value\">Amount (ETH):</label>\n" +
+    "      <label for=\"value\">Amount (DXN):</label>\n" +
     "      <input id=\"value\" type=\"number\" class=\"form-control\" ng-model=\"amount\" step=\"any\" min=\"0\" max=\"999999999999999\" required >\n" +
     "    </div>\n" +
     "  </div>\n" +
@@ -1726,7 +1726,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "      <input id=\"required\" type=\"number\" class=\"form-control\" ng-min=\"1\" ng-max=\"{{maxAllowedConfirmations}}\" ng-model=\"confirmations\" required />\n" +
     "    </div>\n" +
     "    <div class=\"form-group\">\n" +
-    "      <label for=\"daily-limit\"> Daily limit (ETH) </label>\n" +
+    "      <label for=\"daily-limit\"> Daily limit (DXN) </label>\n" +
     "      <input id=\"daily-limit\" type=\"number\" class=\"form-control\" ng-min=\"0\" max=\"999999999999999\" ng-model=\"limit\" required />\n" +
     "    </div>\n" +
     "    <div class=\"panel panel-default\">\n" +
@@ -2221,7 +2221,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "      <input type=\"text\" class=\"form-control\" ng-model=\"name\" name=\"name\" />\n" +
     "    </div>\n" +
     "    <div class=\"form-group\">\n" +
-    "      <label for=\"value\">Amount (ETH)</label>\n" +
+    "      <label for=\"value\">Amount (DXN)</label>\n" +
     "      <input id=\"value\" type=\"number\" class=\"form-control\" ng-model=\"tx.value\" min=\"0\" max=\"999999999999999\" ng-required=\"!abi\">\n" +
     "    </div>\n" +
     "    <div class=\"form-group\">\n" +
@@ -2276,7 +2276,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "<form name=\"form\" class=\"form\">\n" +
     "  <div class=\"modal-body\">\n" +
     "    <div class=\"form-group\">\n" +
-    "      <label for=\"limit\">Daily limit (ETH)</label>\n" +
+    "      <label for=\"limit\">Daily limit (DXN)</label>\n" +
     "      <input id=\"limit\" type=\"number\" step=\"any\" ng-model=\"limit\" min=\"0\" max=\"999999999999999\" class=\"form-control\" required />\n" +
     "    </div>\n" +
     "  </div>\n" +
@@ -2531,7 +2531,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "      <input type=\"text\" class=\"form-control\" ng-model=\"name\" name=\"name\" />\n" +
     "    </div>\n" +
     "    <div class=\"form-group\">\n" +
-    "      <label for=\"value\">Amount (ETH)</label>\n" +
+    "      <label for=\"value\">Amount (DXN)</label>\n" +
     "      <input id=\"value\" type=\"number\" class=\"form-control\" ng-model=\"tx.value\" min=\"0\" max=\"999999999999999\" ng-required=\"!abi\">\n" +
     "    </div>\n" +
     "    <div class=\"form-group\">\n" +
@@ -2584,15 +2584,13 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "<div class=\"modal-body\">\n" +
     "  <p>\n" +
     "    This wallet requires a 3rd party Ethereum account management software like\n" +
-    "    <a href=\"https://metamask.io/\" class=\"prevent-focus\" target=\"_blank\">Metamask</a>,\n" +
-    "    <a href=\"https://github.com/ethereum/mist\" target=\"_blank\">Mist</a> or\n" +
-    "    <a href=\"https://ethcore.io/parity.html\" target=\"_blank\">Parity</a>.\n" +
+    "    <a href=\"https://dexon.org\" class=\"prevent-focus\" target=\"_blank\">DEXON Wallet</a>,\n" +
     "  </p>\n" +
     "  <p>\n" +
     "    You can monitor existing wallets without an account management software but you cannot create new wallets or sign transactions.\n" +
     "  </p>\n" +
     "  <p ngIf=\"metamaskInjected\">\n" +
-    "    <a href=\"#\" ng-click=\"openMetamaskWidgetAndClose()\">Unlock Metamask</a>\n" +
+    "    <a href=\"#\" ng-click=\"openMetamaskWidgetAndClose()\">Unlock DEXON Wallet</a>\n" +
     "  </p>\n" +
     "</div>\n" +
     "<div class=\"modal-footer\">\n" +
@@ -2612,7 +2610,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "<form name=\"form\" class=\"form\">\n" +
     "  <div class=\"modal-body\">\n" +
     "    <div class=\"form-group\">\n" +
-    "      <label for=\"value\">Amount (ETH)</label>\n" +
+    "      <label for=\"value\">Amount (DXN)</label>\n" +
     "      <input id=\"value\" type=\"number\" class=\"form-control\" ng-model=\"tx.value\" ng-min=\"0\" max=\"999999999999999\" required>\n" +
     "    </div>\n" +
     "    <div class=\"form-group\">\n" +

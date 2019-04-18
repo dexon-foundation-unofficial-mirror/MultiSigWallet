@@ -7,7 +7,7 @@ var txDefaultOrig =
   },
   gasLimit: 3141592,
   gasPrice: 18000000000,
-  ethereumNode: "https://mainnet.infura.io:443",
+  ethereumNode: "https://mainnet-rpc.dexon.org:443",
   connectionChecker: {
     method : "OPTIONS",
     url : "https://www.google.com",
@@ -22,7 +22,7 @@ var txDefaultOrig =
   wallet: "injected",
   defaultChainID: null,
   // Mainnet
-  walletFactoryAddress: "0x6e95c8e8557abc08b46f3c347ba06f8dc012763f",
+  walletFactoryAddress: "0x72fba1f435f3a3faf676b2cd6547adeec22f5670",
   tokens: [
     {
       'address': '0x6810e776880c02933d47db1b9fc05908e5386b96',
@@ -117,7 +117,7 @@ var txDefaultOrig =
     {
       'address': '0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2',
       'name': 'Wrapped Ether',
-      'symbol': 'WETH',
+      'symbol': 'WDXN',
       'decimals': 18
     }
   ]
@@ -130,20 +130,16 @@ if (isElectron) {
 var txDefault = {
   ethereumNodes : [
     {
-      url : "https://mainnet.infura.io:443",
+      url : "https://mainnet-rpc.dexon.org:443",
       name: "Remote Mainnet"
     },
     {
-      url : "https://ropsten.infura.io:443",
-      name: "Remote Ropsten"
+      url : "https://testnet-rpc.dexon.org:443",
+      name: "Remote Testnet"
     },
     {
-      url : "https://kovan.infura.io:443",
-      name: "Remote Kovan"
-    },
-    {
-      url : "https://rinkeby.infura.io:443",
-      name: "Remote Rinkeby"
+      url : "https://taipei-rpc.dexon.org:443",
+      name: "Remote Taipei"
     },
     {
       url : "http://localhost:8545",
@@ -155,22 +151,14 @@ var txDefault = {
       name: 'Mainnet',
       address: txDefaultOrig.walletFactoryAddress
     },
-    'ropsten': {
-      name: 'Ropsten',
-      address: '0x5cb85db3e237cac78cbb3fd63e84488cac5bd3dd'
-    },
-    'kovan': {
-      name: 'Kovan',
-      address: '0x2c992817e0152a65937527b774c7a99a84603045'
-    },
-    'rinkeby': {
-      name: 'Rinkeby',
-      address: '0x19ba60816abca236baa096105df09260a4791418'
+    'testnet': {
+      name: 'Testnet',
+      address: '0xd5df676467920173691ed666faf862cdfa534c1c'
     },
     'privatenet': {
       name: 'Privatenet',
-      address: '0xd79426bcee5b46fde413ededeb38364b3e666097'
-    }
+      address: '0x5cb85db3e237cac78cbb3fd63e84488cac5bd3dd'
+    },
   }
 };
 
