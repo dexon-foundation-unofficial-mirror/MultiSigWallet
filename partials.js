@@ -1099,7 +1099,7 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "            Cancel\n" +
     "        </button>\n" +
     "    </div>\n" +
-    "</form>\n"
+    "</form>"
   );
 
 
@@ -2584,13 +2584,15 @@ angular.module('multiSigWeb').run(['$templateCache', function($templateCache) {
     "<div class=\"modal-body\">\n" +
     "  <p>\n" +
     "    This wallet requires a 3rd party Ethereum account management software like\n" +
-    "    <a href=\"https://dexon.org\" class=\"prevent-focus\" target=\"_blank\">DEXON Wallet</a>,\n" +
+    "    <a href=\"https://metamask.io/\" class=\"prevent-focus\" target=\"_blank\">Metamask</a>,\n" +
+    "    <a href=\"https://github.com/ethereum/mist\" target=\"_blank\">Mist</a> or\n" +
+    "    <a href=\"https://ethcore.io/parity.html\" target=\"_blank\">Parity</a>.\n" +
     "  </p>\n" +
     "  <p>\n" +
     "    You can monitor existing wallets without an account management software but you cannot create new wallets or sign transactions.\n" +
     "  </p>\n" +
     "  <p ngIf=\"metamaskInjected\">\n" +
-    "    <a href=\"#\" ng-click=\"openMetamaskWidgetAndClose()\">Unlock DEXON Wallet</a>\n" +
+    "    <a href=\"#\" ng-click=\"openMetamaskWidgetAndClose()\">Unlock Metamask</a>\n" +
     "  </p>\n" +
     "</div>\n" +
     "<div class=\"modal-footer\">\n" +
