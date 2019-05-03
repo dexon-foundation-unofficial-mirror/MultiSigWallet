@@ -25,9 +25,27 @@ var txDefaultOrig =
   walletFactoryAddress: "0x3F9bfd3bCE63B9A5575F455d4a2C8e6a18160543",
   tokens: [
     {
-      'address': '0x6810e776880c02933d47db1b9fc05908e5386b96',
-      'name': 'Gnosis',
-      'symbol': 'GNO',
+      'address': '0x371880392406DEE0D1ad2f5B4f04601Bc5c624B1',
+      'name': 'Ported Ethereum',
+      'symbol': 'ETH.D',
+      'decimals': 18
+    },
+    {
+      'address': '0x7D241007bC731f5D4728aA4aC2aB857c2d08bc65',
+      'name': 'Ported COBINHOOD Token',
+      'symbol': 'COB.D',
+      'decimals': 18
+    },
+    {
+      'address': '0x6586822AEc7c9c547b9Cd92e4ed3E97bbc621950',
+      'name': 'Ported DAI Token',
+      'symbol': 'DAI.D',
+      'decimals': 18
+    },
+    {
+      'address': '0x67DE07a9732c8065ee6e024E11e424233fFE1681',
+      'name': 'Ported EOS',
+      'symbol': 'EOS.D',
       'decimals': 18
     },
   ]

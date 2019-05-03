@@ -305,7 +305,7 @@
               if (e) {
                 reject();
               }
-              if (block && block.hash == "0x55f87cf5428a78a015d06088cb76b4f50afa7b081a45a25dbf0ae7ffb2366b98") {
+              if (block && block.hash == "0x7108ec505c66c3735053746697442050175db51753b3f8c721294b3ba15fa598") {
                 data.chain = "mainnet";
                 data.etherscan = "https://dexscan.org";
                 data.walletFactoryAddress = txDefault.walletFactoryAddresses["mainnet"].address;
